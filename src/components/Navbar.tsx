@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Home, Building2, User, Phone, Menu, X } from 'lucide-react';
 import { Button } from './Button';
-
+import logo_navbar from '../assets/logo.png';
 
 
 interface NavbarProps {
@@ -50,7 +50,7 @@ export function Navbar({ onNavigate, currentPage, transparentOnTop = false }: Na
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center gap-3 cursor-pointer" onClick={() => onNavigate('home')}>
               <img 
-                src="/src/assets/logo.png" 
+                src={logo_navbar} 
                 alt="RÉALITÉS SÉNÉGAL" 
                 className={`h-10 w-auto transition-all duration-300 ${isTransparent ? 'brightness-0 invert' : ''}`}
               />
